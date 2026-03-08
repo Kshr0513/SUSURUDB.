@@ -6,6 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		761B8C022F5D5C97009D1EA3 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C012F5D5C97009D1EA3 /* Auth */; };
+		761B8C042F5D5C97009D1EA3 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C032F5D5C97009D1EA3 /* Functions */; };
+		761B8C062F5D5C97009D1EA3 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C052F5D5C97009D1EA3 /* PostgREST */; };
+		761B8C082F5D5C97009D1EA3 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C072F5D5C97009D1EA3 /* Realtime */; };
+		761B8C0A2F5D5C97009D1EA3 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C092F5D5C97009D1EA3 /* Storage */; };
+		761B8C0C2F5D5CD0009D1EA3 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C0B2F5D5CD0009D1EA3 /* GoogleMobileAds */; };
+		761B8C0E2F5D5CF9009D1EA3 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C0D2F5D5CF9009D1EA3 /* Auth */; };
+		761B8C102F5D5CF9009D1EA3 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C0F2F5D5CF9009D1EA3 /* Functions */; };
+		761B8C122F5D5CF9009D1EA3 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C112F5D5CF9009D1EA3 /* PostgREST */; };
+		761B8C142F5D5CF9009D1EA3 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C132F5D5CF9009D1EA3 /* Realtime */; };
+		761B8C162F5D5CF9009D1EA3 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C152F5D5CF9009D1EA3 /* Storage */; };
+		761B8C182F5D5D9F009D1EA3 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C172F5D5D9F009D1EA3 /* Auth */; };
+		761B8C1A2F5D5D9F009D1EA3 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C192F5D5D9F009D1EA3 /* Functions */; };
+		761B8C1C2F5D5D9F009D1EA3 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C1B2F5D5D9F009D1EA3 /* PostgREST */; };
+		761B8C1E2F5D5D9F009D1EA3 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C1D2F5D5D9F009D1EA3 /* Realtime */; };
+		761B8C202F5D5D9F009D1EA3 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C1F2F5D5D9F009D1EA3 /* Storage */; };
+		761B8C232F5D5E22009D1EA3 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 761B8C222F5D5E22009D1EA3 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		761B8BA72F5D51CD009D1EA3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +49,22 @@
 		761B8BB02F5D51CD009D1EA3 /* SUSURUDB.UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SUSURUDB.UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		761B8C252F5D60A1009D1EA3 /* Exceptions for "SUSURUDB." folder in "SUSURUDB." target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"SUSURUDB--Info.plist",
+			);
+			target = 761B8B982F5D51CC009D1EA3 /* SUSURUDB. */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		761B8B9B2F5D51CC009D1EA3 /* SUSURUDB. */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				761B8C252F5D60A1009D1EA3 /* Exceptions for "SUSURUDB." folder in "SUSURUDB." target */,
+			);
 			path = SUSURUDB.;
 			sourceTree = "<group>";
 		};
@@ -52,6 +85,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				761B8C1A2F5D5D9F009D1EA3 /* Functions in Frameworks */,
+				761B8C0C2F5D5CD0009D1EA3 /* GoogleMobileAds in Frameworks */,
+				761B8C1C2F5D5D9F009D1EA3 /* PostgREST in Frameworks */,
+				761B8C1E2F5D5D9F009D1EA3 /* Realtime in Frameworks */,
+				761B8C062F5D5C97009D1EA3 /* PostgREST in Frameworks */,
+				761B8C182F5D5D9F009D1EA3 /* Auth in Frameworks */,
+				761B8C162F5D5CF9009D1EA3 /* Storage in Frameworks */,
+				761B8C102F5D5CF9009D1EA3 /* Functions in Frameworks */,
+				761B8C142F5D5CF9009D1EA3 /* Realtime in Frameworks */,
+				761B8C122F5D5CF9009D1EA3 /* PostgREST in Frameworks */,
+				761B8C042F5D5C97009D1EA3 /* Functions in Frameworks */,
+				761B8C232F5D5E22009D1EA3 /* Supabase in Frameworks */,
+				761B8C0E2F5D5CF9009D1EA3 /* Auth in Frameworks */,
+				761B8C202F5D5D9F009D1EA3 /* Storage in Frameworks */,
+				761B8C022F5D5C97009D1EA3 /* Auth in Frameworks */,
+				761B8C0A2F5D5C97009D1EA3 /* Storage in Frameworks */,
+				761B8C082F5D5C97009D1EA3 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +128,7 @@
 				761B8B9B2F5D51CC009D1EA3 /* SUSURUDB. */,
 				761B8BA92F5D51CD009D1EA3 /* SUSURUDB.Tests */,
 				761B8BB32F5D51CD009D1EA3 /* SUSURUDB.UITests */,
+				761B8C212F5D5E22009D1EA3 /* Frameworks */,
 				761B8B9A2F5D51CC009D1EA3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +141,13 @@
 				761B8BB02F5D51CD009D1EA3 /* SUSURUDB.UITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		761B8C212F5D5E22009D1EA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +170,23 @@
 			);
 			name = SUSURUDB.;
 			packageProductDependencies = (
+				761B8C012F5D5C97009D1EA3 /* Auth */,
+				761B8C032F5D5C97009D1EA3 /* Functions */,
+				761B8C052F5D5C97009D1EA3 /* PostgREST */,
+				761B8C072F5D5C97009D1EA3 /* Realtime */,
+				761B8C092F5D5C97009D1EA3 /* Storage */,
+				761B8C0B2F5D5CD0009D1EA3 /* GoogleMobileAds */,
+				761B8C0D2F5D5CF9009D1EA3 /* Auth */,
+				761B8C0F2F5D5CF9009D1EA3 /* Functions */,
+				761B8C112F5D5CF9009D1EA3 /* PostgREST */,
+				761B8C132F5D5CF9009D1EA3 /* Realtime */,
+				761B8C152F5D5CF9009D1EA3 /* Storage */,
+				761B8C172F5D5D9F009D1EA3 /* Auth */,
+				761B8C192F5D5D9F009D1EA3 /* Functions */,
+				761B8C1B2F5D5D9F009D1EA3 /* PostgREST */,
+				761B8C1D2F5D5D9F009D1EA3 /* Realtime */,
+				761B8C1F2F5D5D9F009D1EA3 /* Storage */,
+				761B8C222F5D5E22009D1EA3 /* Supabase */,
 			);
 			productName = SUSURUDB.;
 			productReference = 761B8B992F5D51CC009D1EA3 /* SUSURUDB..app */;
@@ -195,6 +270,10 @@
 			);
 			mainGroup = 761B8B902F5D51CC009D1EA3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				761B8BCD2F5D5351009D1EA3 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				761B8BCE2F5D5380009D1EA3 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 761B8B9A2F5D51CC009D1EA3 /* Products */;
 			projectDirPath = "";
@@ -397,6 +476,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SUSURUDB--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +504,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SUSURUDB--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +631,98 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		761B8BCD2F5D5351009D1EA3 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.1.0;
+			};
+		};
+		761B8BCE2F5D5380009D1EA3 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		761B8C012F5D5C97009D1EA3 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Auth;
+		};
+		761B8C032F5D5C97009D1EA3 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Functions;
+		};
+		761B8C052F5D5C97009D1EA3 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgREST;
+		};
+		761B8C072F5D5C97009D1EA3 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Realtime;
+		};
+		761B8C092F5D5C97009D1EA3 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Storage;
+		};
+		761B8C0B2F5D5CD0009D1EA3 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 761B8BCD2F5D5351009D1EA3 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		761B8C0D2F5D5CF9009D1EA3 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Auth;
+		};
+		761B8C0F2F5D5CF9009D1EA3 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Functions;
+		};
+		761B8C112F5D5CF9009D1EA3 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgREST;
+		};
+		761B8C132F5D5CF9009D1EA3 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Realtime;
+		};
+		761B8C152F5D5CF9009D1EA3 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Storage;
+		};
+		761B8C172F5D5D9F009D1EA3 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Auth;
+		};
+		761B8C192F5D5D9F009D1EA3 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Functions;
+		};
+		761B8C1B2F5D5D9F009D1EA3 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgREST;
+		};
+		761B8C1D2F5D5D9F009D1EA3 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Realtime;
+		};
+		761B8C1F2F5D5D9F009D1EA3 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Storage;
+		};
+		761B8C222F5D5E22009D1EA3 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 761B8BCE2F5D5380009D1EA3 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 761B8B912F5D51CC009D1EA3 /* Project object */;
 }
