@@ -14,6 +14,7 @@ struct Shop: Identifiable, Codable {
     let shopUrl: String?
     let createdAt: Date?
     var isVisited: Bool = false
+    var videos: [SVideo]?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,7 +31,11 @@ extension Shop {
         return URL(string: "https://img.youtube.com/vi/\(videoId)/mqdefault.jpg")
     }
 
-    var latestVideoId: String?    { nil }
+    var latestVideoId: String? {
+        videos?.sorted {
+            ($0.publishedAt ?? .distantPast) > ($1.publishedAt ?? .distantPast)
+        }.first?.videoId
+    }
     var latestVideoTitle: String? { nil }
     var genre: String?            { nil }
     var visitCount: Int?          { nil }

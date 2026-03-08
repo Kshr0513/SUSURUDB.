@@ -36,9 +36,9 @@ class SupabaseService: ObservableObject {
 
         let shops: [Shop] = try await supabase
             .from("shops")
-            .select()
+            .select("*, videos(id, video_id, title, youtube_url, published_at, channel)")
             .order("id")
-            .range(from: from, to: to)
+            .limit(20)
             .execute()
             .value
         return shops
