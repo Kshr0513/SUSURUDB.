@@ -7,7 +7,8 @@
 
 import Foundation
 import Supabase
-
+import CoreLocation
+import Contacts
 // MARK: - クライアント（シングルトン）
 let supabase = SupabaseClient(
     supabaseURL: URL(string: "https://kghupwsbtsdymbtjqlgl.supabase.co")!,
@@ -32,13 +33,12 @@ class SupabaseService: ObservableObject {
     // MARK: - 店舗一覧取得（ページネーション）
     func fetchShops(page: Int = 0, limit: Int = 20) async throws -> [Shop] {
         let from = page * limit
-        let to   = from + limit - 1
-
+        let to = from + limit - 1
         let shops: [Shop] = try await supabase
             .from("shops")
             .select("*, videos(id, video_id, title, youtube_url, published_at, channel)")
             .order("id")
-            .limit(20)
+            .range(from: from, to: to)
             .execute()
             .value
         return shops
@@ -54,5 +54,11 @@ class SupabaseService: ObservableObject {
             .execute()
             .value
         return videos
+    }
+    func geocodeAddress(_ address: String) async -> CLLocationCoordinate2D? {
+        let geocoder = CLGeocoder()
+        guard let placemarks = try? await geocoder.geocodeAddressString(address),
+              let location = placemarks.first?.location else { return nil }
+        return location.coordinate
     }
 }

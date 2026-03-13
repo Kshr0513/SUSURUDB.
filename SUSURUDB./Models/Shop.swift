@@ -22,6 +22,7 @@ struct Shop: Identifiable, Codable {
         case address
         case shopUrl   = "shop_url"
         case createdAt = "created_at"
+        case videos
     }
 }
 

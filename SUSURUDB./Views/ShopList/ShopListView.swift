@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ShopListView: View {
     @StateObject private var vm = ShopListViewModel()
-
+    @State private var scrollPosition: Int? = nil
     // 広告を15件に1個挿入
     private var listItems: [ListItem] {
         var items: [ListItem] = []
         for (i, shop) in vm.filtered.enumerated() {
             items.append(.shop(shop))
-            if (i + 1) % 15 == 0 && i != vm.filtered.count - 1 {
+            if (i + 1) % 15 == 0 {
                 items.append(.ad)
             }
         }
@@ -24,38 +24,47 @@ struct ShopListView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-            ScrollView {
-                VStack(spacing: 0) {
-                    headerView
-                    searchBar
-                    genreFilter
-                    visitFilter
-                    countLabel
+            ScrollViewReader { proxy in
+                ScrollView {
+                    VStack(spacing: 0) {
+                        headerView
+                        searchBar
+                        genreFilter
+                        visitFilter
+                        countLabel
 
-                    if vm.isLoading {
-                        ProgressView()
-                            .padding(40)
-                    } else if vm.filtered.isEmpty {
-                        emptyView
-                    } else {
-                        LazyVStack(spacing: 16) {
-                            ForEach(listItems) { item in
-                                switch item {
-                                case .shop(let shop):
-                                    ShopCardView(shop: shop) {
-                                        vm.toggleVisit(shop: shop)
+                        if vm.isLoading {
+                            ProgressView()
+                                .padding(40)
+                        } else if vm.filtered.isEmpty {
+                            emptyView
+                        } else {
+                            LazyVStack(spacing: 16) {
+                                ForEach(listItems) { item in
+                                    switch item {
+                                    case .shop(let shop):
+                                        ShopCardView(shop: shop) {
+                                            vm.toggleVisit(shop: shop)
+                                        }
+                                        .id(shop.id)
+                                    case .ad:
+                                        NativeAdView()
                                     }
-                                case .ad:
-                                    NativeAdView()
+                                }
+                                if vm.hasMore {
+                                    ProgressView()
+                                        .padding()
+                                        .onAppear {
+                                            Task { await vm.fetchMore() }
+                                        }
                                 }
                             }
+                            .padding(.horizontal, 20)
+                            .padding(.bottom, 140)
                         }
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 140)
                     }
                 }
             }
-
             // バナー広告
             VStack(spacing: 0) {
                 BannerAdView(adUnitID: "ca-app-pub-XXXXXXXX/XXXXXXXX")
@@ -70,7 +79,9 @@ struct ShopListView: View {
         .ignoresSafeArea(edges: .bottom)
         .onAppear {
             Task {
-                await vm.fetchShops()
+                if vm.shops.isEmpty {  // ← 既にデータがある場合は再取得しない
+                    await vm.fetchShops()
+                }
             }
         }
     }

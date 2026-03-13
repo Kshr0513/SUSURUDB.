@@ -9,7 +9,7 @@ import Foundation
 
 struct SVideo: Identifiable, Codable {
     let id: Int
-    let shopId: Int
+    let shopId: Int?
     let channel: String?
     let title: String?
     let youtubeUrl: String?
